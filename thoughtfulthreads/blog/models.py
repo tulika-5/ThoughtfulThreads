@@ -1,9 +1,6 @@
 from django.db import models
 from django.utils.html import format_html
-
-
-
-
+from django.contrib.auth.models import User
 
 class Category(models.Model):
     cat_id = models.AutoField(primary_key=True)
@@ -21,7 +18,6 @@ class Category(models.Model):
         return self.title
 
 
-# Post Mode
 class Post(models.Model):
     post_id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=200)
@@ -32,3 +28,17 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Rating(models.Model):
+    post = models.ForeignKey(Post, related_name='ratings', on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    rating = models.IntegerField()
+    opinion = models.TextField(blank=True, null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        unique_together = ('post', 'user')  # Ensure one rating per user per post
+
+    def __str__(self):
+        return f'{self.user.username} - {self.rating} stars'
