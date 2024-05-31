@@ -1,47 +1,66 @@
+<!-- Footer -->
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/footerstyle.css'%}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
+<!-- Footer -->
+<footer>
+  <div class="footer-main">
+      <div class="container">
+          <div class="row">
+              <!-- About Section -->
+              <div class="col-lg-4 col-md-6 col-sm-12">
+                  <div class="footer-widget">
+                      <h4>About Thoughtful Threads</h4>
+                      <p>Welcome to Thoughtful Threads, where we weave together stories, insights, and ideas to inspire and inform. Our mission is to provide thought-provoking content that caters to diverse interests and fosters a community of curious minds.</p>
+                      <ul>
+                          <li><a href="#" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+                          <li><a href="#" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+                          <li><a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+                          <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+                          <li><a href="#" aria-label="RSS"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
+                          <li><a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p" aria-hidden="true"></i></a></li>
+                          <li><a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
+                      </ul>
+                  </div>
+              </div>
+              <!-- Links Section -->
+              <div class="col-lg-4 col-md-6 col-sm-12">
+                  <div class="footer-link">
+                      <h4>Quick Links</h4>
+                      <ul>
 
-<footer class="page-footer bg-primary">
-  <div class="container">
-    <div class="row">
-      <div class="col l6 s12">
-        <h5 class="white-text">ThoughtsThreads</h5>
-        <p class="grey-text text-lighten-4">Engage with our diverse threads of thought.</p>
-      </div>
-      <div class="col l4 offset-l2 s12">
-        <h5 class="white-text">Connect With Us</h5>
-        <ul>
-          <li><a class="grey-text text-lighten-3" href="#!"><i class="fab fa-instagram"></i> Instagram</a></li>
-          <li><a class="grey-text text-lighten-3" href="#!"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
-          <li><a class="grey-text text-lighten-3" href="#!"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-          <li><a class="grey-text text-lighten-3" href="#!"><i class="fab fa-twitter"></i> Twitter</a></li>
-          <li><a class="grey-text text-lighten-3" href="#!"><i class="fab fa-facebook"></i> Facebook</a></li>
-          <li><a class="grey-text text-lighten-3" href="#!"><i class="fab fa-youtube"></i> YouTube</a></li>
-        </ul>
-      </div>
+                          <li><a href="/categories">Categories</a></li>
+                          <li><a href="/about">About Us</a></li>
+                          <li><a href="/contact">Contact Us</a></li>
+                          <li><a href="/privacy">Privacy Policy</a></li>
+                          <li><a href="/terms">Terms of Service</a></li>
+                      </ul>
+                  </div>
+              </div>
+              <!-- Contact Section -->
+              <div class="col-lg-4 col-md-12 col-sm-12">
+                <div class="footer-link">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="/category/technology">Technology</a></li>
+                        <li><a href="/category/lifestyle">Lifestyle</a></li>
+                        <li><a href="/category/travel">Travel</a></li>
+                        <li><a href="/category/food">Food</a></li>
+                        <li><a href="/category/health">Health</a></li>
+                        <li><a href="/category/education">Education</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="row">
-      <div class="col l6 s12">
-        <h5 class="white-text">Explore</h5>
-        <ul>
-          <li><a class="grey-text text-lighten-3" href="/termsandcondition">Terms and Conditions</a></li>
-          <li><a class="grey-text text-lighten-3" href="#!">About Us</a></li>
-          <li><a class="grey-text text-lighten-3" href="#!">Contact Us</a></li>
-          <li><a class="grey-text text-lighten-3" href="/privacy">Privacy Policy</a></li>
-        </ul>
-      </div>
-      <div class="col l6 s12">
-        <h5 class="white-text">Social Media </h5>
-        <ul>
-          <li><a class="grey-text text-lighten-3" href="#!">Instagram </a></li>
-          <li><a class="grey-text text-lighten-3" href="#!">WhatsApp </a></li>
-          <li><a class="grey-text text-lighten-3" href="#!">LinkedIn </a></li>
-          <li><a class="grey-text text-lighten-3" href="#!">Twitter </a></li>
-          <li><a class="grey-text text-lighten-3" href="#!">Facebook </a></li>
-     
-        </ul>
-      </div>
-    </div>
-  </div>
+</div>
+  <!-- Copyright Section -->
   <div class="footer-copyright">
-    <div class="container">
-      © 2024 thoughtsthreads.
+      <div class="container">
+          <p>&copy; 2024 Thoughtful Threads. All Rights Reserved. <a href="/privacy">Privacy Policy</a> | <a href="/terms">Terms of Service</a></p>
+      </div>
+  </div>
+</footer>
+<!-- End Footer -->

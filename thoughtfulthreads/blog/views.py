@@ -3,6 +3,14 @@ from django.shortcuts import render
 from blog.models import Post, Category
 
 
+
+
+def index(request):
+    return render(request, 'index.html')
+
+
+
+
 # Create your views here.
 def home(request):
     # load all the post from db(10)
