@@ -18,9 +18,14 @@ from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
 from .views import home, post,category
+from . import views
 
 urlpatterns = [
     path('', home),
     path('blog/<slug:url>', post),
-    path('category/<slug:url>',category)
+    path('category/<slug:url>',category),
+
+    path('terms/', views.termandcondition, name='terms'),
+    path('privacy/', views.privacy, name='privacy'),
 ]
+

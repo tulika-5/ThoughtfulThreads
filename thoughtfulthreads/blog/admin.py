@@ -10,6 +10,7 @@ class CategoryAdmin(admin.ModelAdmin):
     search_fields = ('title',)
 
 
+
 class PostAdmin(admin.ModelAdmin):
     list_display = ('title',)
     search_fields = ('title',)

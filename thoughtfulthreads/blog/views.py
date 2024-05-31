@@ -30,3 +30,10 @@ def category(request, url):
     cat = Category.objects.get(url=url)
     posts = Post.objects.filter(cat=cat)
     return render(request, "category.html", {'cat': cat, 'posts': posts})
+
+def termandcondition(request):
+    return render(request, 'term&condition.html')
+
+def privacy(request):
+    return render(request, 'privacy.html')
+
