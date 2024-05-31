@@ -1,5 +1,5 @@
 
-```markdown
+
 # ThoughtfulThreads
 
 ThoughtfulThreads is a Django-based blog website where users can read blog posts from various categories such as politics, science and technology, entertainment, and sports. Users can register as either writers or readers, login to save their favorite blogs to their profile, and access exclusive features.
