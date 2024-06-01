@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThoughtThreads</title>
+    <!-- Materialize CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <style>
+        .red-button {
+            color: red;
+        }
+        .bg-primary {
+            background-color: #477091 !important; /* Header background color set to specific blue */
+        }
+        .nav-wrapper .brand-logo, .nav-wrapper ul li a {
+            color: rgb(12, 12, 12); /* Text color in the header set to dark for better contrast */
+        }
+        .nav-wrapper ul li img.icon {
+            vertical-align: middle; 
+            margin-right: 8px; 
+            height: 24px; 
+        }
+        .mt20 {
+            margin-top: 20px;
+        }
+        .container-custom {
+            width: 95% !important;
+            margin: auto;
+        }
+        main {
+            margin-top: 20px; 
+        }
+    </style>
+</head>
+<body>
+
+<!-- Dropdown Structure -->
+{% load static %}
+<ul id="dropdown1" class="dropdown-content">
+    {% for cat in cats %}
+    <li><a href="/category/{{cat.url}}">{{cat.title}}</a></li>
+    {% endfor %}
+</ul>
+
+<nav class="bg-primary">
+    <div class="container container-custom">
+        <div class="nav-wrapper">
+            <a href="/home" class="brand-logo">ThoughtfulThreads</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="/about"><img src="{% static 'images/about.png' %}" alt="About icon" class="icon">ABOUT</a></li>
+                <li><a href="/admin"><img src="{% static 'images/admin.png' %}" alt="Admin icon" class="icon">ADMIN</a></li>
+                <li><a href="/profile"><img src="{% static 'images/user.png' %}" alt="Profile icon" class="icon">PROFILE</a></li>
+                <!-- Dropdown Trigger -->
+                <li><a class="dropdown-trigger" href="#!" data-target="dropdown1"><img src="{% static 'images/category.png' %}" alt="Category icon" class="icon">CATEGORY<i class="material-icons right">arrow_drop_down</i></a></li>
+                <li><a href="/" class="red-button"><img src="{% static 'images/logout.png' %}" alt="Logout icon" class="icon">LOGOUT</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+<!-- Materialize JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.dropdown-trigger');
+        var instances = M.Dropdown.init(elems);
+    });
+</script>
+
+</body>
+</html>

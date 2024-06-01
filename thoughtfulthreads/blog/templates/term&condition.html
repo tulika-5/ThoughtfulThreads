@@ -1,11 +1,21 @@
-{%extends 'base.html' %}
+{% extends 'base.html' %}
+
+{% block content %}
 
 <style>
     body {
         font-family: Arial, sans-serif;
         line-height: 1.6;
-        margin: 20px;
+        margin: 0;
         padding: 0;
+        background-color: #f4f4f4;
+    }
+    .container {
+        width: 80%;
+        margin: 40px auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
     h1, h2 {
         color: #333;
@@ -21,9 +31,7 @@
     }
 </style>
 
-{%block content%}
-
-
+<div class="container">
     <h1>Terms and Conditions</h1>
     
     <p>Welcome to thoughtsthreads!</p>
@@ -100,7 +108,7 @@
     
     <p>These organizations may link to our home page so long as the link: (a) is not in any way deceptive; (b) does not falsely imply sponsorship, endorsement or approval of the linking party and its products or services; and (c) fits within the context of the linking party’s site.</p>
     
-    <p>If you are one of the organizations listed in paragraph 
+    <p>If you are one of the organizations listed in paragraph</p>
+</div>
 
-
-     {%endblock%}
+{% endblock %}

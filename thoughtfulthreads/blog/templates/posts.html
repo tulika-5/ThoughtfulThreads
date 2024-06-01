@@ -17,6 +17,10 @@
             <p>( {{post.cat.title}} )</p>
 
             <img src="/media/{{post.image}}" class="responsive-img" alt="">
+<!-- Like Button -->
+<button onclick="likePost({{ post.id }})">Like</button>
+<!-- Read Later Button -->
+<button onclick="saveForLater({{ post.id }})">Read Later</button>
 
             <br>
             <p>

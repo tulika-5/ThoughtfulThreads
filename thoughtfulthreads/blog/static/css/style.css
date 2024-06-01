@@ -1,5 +1,5 @@
 .bg-primary{
-    background:#000000!important;
+    background:#477091!important;
     }
     
     .mt20{
@@ -9,4 +9,11 @@
     .container-custom{
     width:95%!important;
     margin:auto;
+    }
+
+    .nav-wrapper ul li img.icon {
+        vertical-align: middle; /* Align icons with text */
+        margin-right: 8px; /* Space between icon and text */
+        width: 24px; /* Set icon width */
+        height: 24px; /* Set icon height */
     }
